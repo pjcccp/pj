@@ -3,7 +3,6 @@ require File.expand_path('../boot', __FILE__)
 require 'rails/all'
 
 # If you have a Gemfile, require the gems listed there, including any gems
-#Bundler.require(*Rails.groups(:assets => %w(development test)))
 # you've limited to :test, :development, or :production.
 Bundler.require(:default, Rails.env) if defined?(Bundler)
 
@@ -48,11 +47,6 @@ module ActiveInvoices
     #  action_mailer.smtp_settings = smtp_settings.inject({}){|memo,(k,v)| memo[k.to_sym] = v; memo}
     #end
     
-    #config.from_file 'settings.yml'
-    # Enable the asset pipeline
-        config.assets.enabled = true
-
-        # Version of your assets, change this if you want to expire all your assets
-        config.assets.version = '1.0'
+    config.from_file 'settings.yml'
   end
 end
