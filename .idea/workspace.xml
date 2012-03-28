@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="09ff15af-88e1-43bd-874c-9ae5df678bae" name="Default" comment="">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/config/databse.example.yml" afterPath="$PROJECT_DIR$/config/database.example.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/application.rb" afterPath="$PROJECT_DIR$/config/application.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/log/development.log" afterPath="$PROJECT_DIR$/log/development.log" />
     </list>
     <ignored path="pj.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -93,7 +90,7 @@
       <file leaf-file-name="application.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/config/application.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="58" column="24" selection-start="2494" selection-end="2494" vertical-scroll-proportion="0.86849314">
+            <state line="5" column="1" selection-start="144" selection-end="144" vertical-scroll-proportion="0.10958904">
               <folding />
             </state>
           </provider>
@@ -631,7 +628,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/config/application.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="58" column="24" selection-start="2494" selection-end="2494" vertical-scroll-proportion="0.86849314">
+        <state line="5" column="1" selection-start="144" selection-end="144" vertical-scroll-proportion="0.10958904">
           <folding />
         </state>
       </provider>
