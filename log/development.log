@@ -28482,3 +28482,645 @@ Migrating to CreateInternationals (20120309085036)
  AND i.relnamespace IN (SELECT oid FROM pg_namespace WHERE nspname IN ('"$user"','public') )
  ORDER BY i.relname
 [0m
+DEPRECATION WARNING: config.action_view.debug_rjs will be removed in 3.1, from 3.1 onwards you will need to install prototype-rails to continue to use RJS templates . (called from <top (required)> at /Users/Elliott/github/pj/config/environment.rb:5)
+[nil, ["/Users/Elliott/github/pj/app/admin", "/Users/Elliott/github/pj/app/admin/admin_users.rb", "/Users/Elliott/github/pj/app/admin/clients.rb", "/Users/Elliott/github/pj/app/admin/dashboards.rb", "/Users/Elliott/github/pj/app/admin/domestics.rb", "/Users/Elliott/github/pj/app/admin/freights.rb", "/Users/Elliott/github/pj/app/admin/internationals.rb", "/Users/Elliott/github/pj/app/admin/invoices.rb", "/Users/Elliott/github/pj/app/admin/items.rb", "/Users/Elliott/github/pj/app/admin/shipments.rb"]]
+[nil, ["/Users/Elliott/github/pj/app/admin", "/Users/Elliott/github/pj/app/admin/admin_users.rb", "/Users/Elliott/github/pj/app/admin/clients.rb", "/Users/Elliott/github/pj/app/admin/dashboards.rb", "/Users/Elliott/github/pj/app/admin/domestics.rb", "/Users/Elliott/github/pj/app/admin/freights.rb", "/Users/Elliott/github/pj/app/admin/internationals.rb", "/Users/Elliott/github/pj/app/admin/invoices.rb", "/Users/Elliott/github/pj/app/admin/items.rb", "/Users/Elliott/github/pj/app/admin/shipments.rb"]]
+[nil, []]
+[nil, ["/Users/Elliott/github/pj/app/admin"]]
+[nil, ["/Users/Elliott/github/pj/app/admin", "/Users/Elliott/github/pj/app/admin/admin_users.rb"]]
+[nil, ["/Users/Elliott/github/pj/app/admin", "/Users/Elliott/github/pj/app/admin/admin_users.rb", "/Users/Elliott/github/pj/app/admin/clients.rb"]]
+[nil, ["/Users/Elliott/github/pj/app/admin", "/Users/Elliott/github/pj/app/admin/admin_users.rb", "/Users/Elliott/github/pj/app/admin/clients.rb", "/Users/Elliott/github/pj/app/admin/dashboards.rb"]]
+[nil, ["/Users/Elliott/github/pj/app/admin", "/Users/Elliott/github/pj/app/admin/admin_users.rb", "/Users/Elliott/github/pj/app/admin/clients.rb", "/Users/Elliott/github/pj/app/admin/dashboards.rb", "/Users/Elliott/github/pj/app/admin/domestics.rb"]]
+[nil, ["/Users/Elliott/github/pj/app/admin", "/Users/Elliott/github/pj/app/admin/admin_users.rb", "/Users/Elliott/github/pj/app/admin/clients.rb", "/Users/Elliott/github/pj/app/admin/dashboards.rb", "/Users/Elliott/github/pj/app/admin/domestics.rb", "/Users/Elliott/github/pj/app/admin/freights.rb"]]
+[nil, ["/Users/Elliott/github/pj/app/admin", "/Users/Elliott/github/pj/app/admin/admin_users.rb", "/Users/Elliott/github/pj/app/admin/clients.rb", "/Users/Elliott/github/pj/app/admin/dashboards.rb", "/Users/Elliott/github/pj/app/admin/domestics.rb", "/Users/Elliott/github/pj/app/admin/freights.rb", "/Users/Elliott/github/pj/app/admin/internationals.rb"]]
+[nil, ["/Users/Elliott/github/pj/app/admin", "/Users/Elliott/github/pj/app/admin/admin_users.rb", "/Users/Elliott/github/pj/app/admin/clients.rb", "/Users/Elliott/github/pj/app/admin/dashboards.rb", "/Users/Elliott/github/pj/app/admin/domestics.rb", "/Users/Elliott/github/pj/app/admin/freights.rb", "/Users/Elliott/github/pj/app/admin/internationals.rb", "/Users/Elliott/github/pj/app/admin/invoices.rb"]]
+[nil, ["/Users/Elliott/github/pj/app/admin", "/Users/Elliott/github/pj/app/admin/admin_users.rb", "/Users/Elliott/github/pj/app/admin/clients.rb", "/Users/Elliott/github/pj/app/admin/dashboards.rb", "/Users/Elliott/github/pj/app/admin/domestics.rb", "/Users/Elliott/github/pj/app/admin/freights.rb", "/Users/Elliott/github/pj/app/admin/internationals.rb", "/Users/Elliott/github/pj/app/admin/invoices.rb", "/Users/Elliott/github/pj/app/admin/items.rb"]]
+  [1m[36mSQL (0.5ms)[0m  [1mSHOW client_min_messages[0m
+  [1m[35mSQL (0.2ms)[0m  SET client_min_messages TO 'panic'
+  [1m[36mSQL (0.2ms)[0m  [1mSET standard_conforming_strings = on[0m
+  [1m[35mSQL (0.1ms)[0m  SET client_min_messages TO 'notice'
+  [1m[36mSQL (103.6ms)[0m  [1mSET time zone 'UTC'[0m
+  [1m[35mSQL (0.2ms)[0m  SHOW TIME ZONE
+  [1m[36mSQL (5.7ms)[0m  [1m SELECT COUNT(*)
+ FROM pg_tables
+ WHERE tablename = 'schema_migrations'
+ AND schemaname = ANY (current_schemas(false))
+[0m
+  [1m[35mSQL (1.5ms)[0m   SELECT tablename
+ FROM pg_tables
+ WHERE schemaname = ANY (current_schemas(false))
+  [1m[36mSQL (4.0ms)[0m  [1m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"schema_migrations"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [1m[35mSQL (54.1ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations"
+Migrating to CreateAdminNotes (20110818171143)
+Migrating to MoveAdminNotesToComments (20110818171144)
+Migrating to DeviseCreateAdminUsers (20110818211142)
+Migrating to CreateClients (20110818214436)
+Migrating to CreateInvoices (20110818220252)
+Migrating to CreateItems (20110818222838)
+Migrating to CreateShipments (20120307223231)
+Migrating to CreateDomestics (20120309084943)
+Migrating to CreateFreights (20120309085010)
+Migrating to CreateInternationals (20120309085036)
+  [1m[36mSQL (0.4ms)[0m  [1mSHOW client_min_messages[0m
+  [1m[35mSQL (0.2ms)[0m  SET client_min_messages TO 'panic'
+  [1m[36mSQL (0.2ms)[0m  [1mSET standard_conforming_strings = on[0m
+  [1m[35mSQL (0.1ms)[0m  SET client_min_messages TO 'notice'
+  [1m[36mSQL (0.8ms)[0m  [1mSET time zone 'UTC'[0m
+  [1m[35mSQL (0.3ms)[0m  SHOW TIME ZONE
+  [1m[36mSQL (5.4ms)[0m  [1m SELECT COUNT(*)
+ FROM pg_tables
+ WHERE tablename = 'schema_migrations'
+ AND schemaname = ANY (current_schemas(false))
+[0m
+  [1m[35mSQL (4.4ms)[0m   SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"schema_migrations"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+  [1m[36mSQL (0.8ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+  [1m[35mSQL (1.3ms)[0m   SELECT tablename
+ FROM pg_tables
+ WHERE schemaname = ANY (current_schemas(false))
+  [1m[36mSQL (0.9ms)[0m  [1m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"active_admin_comments"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [1m[35mPK and serial sequence (5.2ms)[0m   SELECT attr.attname, seq.relname
+ FROM pg_class seq,
+ pg_attribute attr,
+ pg_depend dep,
+ pg_namespace name,
+ pg_constraint cons
+ WHERE seq.oid = dep.objid
+ AND seq.relkind = 'S'
+ AND attr.attrelid = dep.refobjid
+ AND attr.attnum = dep.refobjsubid
+ AND attr.attrelid = cons.conrelid
+ AND attr.attnum = cons.conkey[1]
+ AND cons.contype = 'p'
+ AND dep.refobjid = '"active_admin_comments"'::regclass
+  [1m[36mSQL (0.2ms)[0m  [1mSHOW search_path[0m
+  [1m[35mSQL (3.6ms)[0m   SELECT distinct i.relname, d.indisunique, d.indkey, t.oid
+ FROM pg_class t, pg_class i, pg_index d
+ WHERE i.relkind = 'i'
+ AND d.indexrelid = i.oid
+ AND d.indisprimary = 'f'
+ AND t.oid = d.indrelid
+ AND t.relname = 'active_admin_comments'
+ AND i.relnamespace IN (SELECT oid FROM pg_namespace WHERE nspname IN ('"$user"','public') )
+ ORDER BY i.relname
+  [1m[36mColumns for index index_active_admin_comments_on_author_type_and_author_id on active_admin_comments (0.6ms)[0m  [1m SELECT a.attnum, a.attname
+ FROM pg_attribute a
+ WHERE a.attrelid = 16399
+ AND a.attnum IN (5,4)
+[0m
+  [1m[35mColumns for index index_active_admin_comments_on_namespace on active_admin_comments (0.3ms)[0m   SELECT a.attnum, a.attname
+ FROM pg_attribute a
+ WHERE a.attrelid = 16399
+ AND a.attnum IN (9)
+  [1m[36mColumns for index index_admin_notes_on_resource_type_and_resource_id on active_admin_comments (0.3ms)[0m  [1m SELECT a.attnum, a.attname
+ FROM pg_attribute a
+ WHERE a.attrelid = 16399
+ AND a.attnum IN (3,2)
+[0m
+  [1m[35mSQL (0.9ms)[0m   SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"admin_users"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+  [1m[36mPK and serial sequence (3.4ms)[0m  [1m SELECT attr.attname, seq.relname
+ FROM pg_class seq,
+ pg_attribute attr,
+ pg_depend dep,
+ pg_namespace name,
+ pg_constraint cons
+ WHERE seq.oid = dep.objid
+ AND seq.relkind = 'S'
+ AND attr.attrelid = dep.refobjid
+ AND attr.attnum = dep.refobjsubid
+ AND attr.attrelid = cons.conrelid
+ AND attr.attnum = cons.conkey[1]
+ AND cons.contype = 'p'
+ AND dep.refobjid = '"admin_users"'::regclass
+[0m
+  [1m[35mSQL (1.6ms)[0m   SELECT distinct i.relname, d.indisunique, d.indkey, t.oid
+ FROM pg_class t, pg_class i, pg_index d
+ WHERE i.relkind = 'i'
+ AND d.indexrelid = i.oid
+ AND d.indisprimary = 'f'
+ AND t.oid = d.indrelid
+ AND t.relname = 'admin_users'
+ AND i.relnamespace IN (SELECT oid FROM pg_namespace WHERE nspname IN ('"$user"','public') )
+ ORDER BY i.relname
+  [1m[36mColumns for index index_admin_users_on_email on admin_users (0.5ms)[0m  [1m SELECT a.attnum, a.attname
+ FROM pg_attribute a
+ WHERE a.attrelid = 16414
+ AND a.attnum IN (2)
+[0m
+  [1m[35mColumns for index index_admin_users_on_reset_password_token on admin_users (0.3ms)[0m   SELECT a.attnum, a.attname
+ FROM pg_attribute a
+ WHERE a.attrelid = 16414
+ AND a.attnum IN (4)
+  [1m[36mSQL (0.8ms)[0m  [1m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"clients"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [1m[35mPK and serial sequence (3.2ms)[0m   SELECT attr.attname, seq.relname
+ FROM pg_class seq,
+ pg_attribute attr,
+ pg_depend dep,
+ pg_namespace name,
+ pg_constraint cons
+ WHERE seq.oid = dep.objid
+ AND seq.relkind = 'S'
+ AND attr.attrelid = dep.refobjid
+ AND attr.attnum = dep.refobjsubid
+ AND attr.attrelid = cons.conrelid
+ AND attr.attnum = cons.conkey[1]
+ AND cons.contype = 'p'
+ AND dep.refobjid = '"clients"'::regclass
+  [1m[36mSQL (1.4ms)[0m  [1m SELECT distinct i.relname, d.indisunique, d.indkey, t.oid
+ FROM pg_class t, pg_class i, pg_index d
+ WHERE i.relkind = 'i'
+ AND d.indexrelid = i.oid
+ AND d.indisprimary = 'f'
+ AND t.oid = d.indrelid
+ AND t.relname = 'clients'
+ AND i.relnamespace IN (SELECT oid FROM pg_namespace WHERE nspname IN ('"$user"','public') )
+ ORDER BY i.relname
+[0m
+  [1m[35mSQL (0.8ms)[0m   SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"domestics"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+  [1m[36mPK and serial sequence (3.3ms)[0m  [1m SELECT attr.attname, seq.relname
+ FROM pg_class seq,
+ pg_attribute attr,
+ pg_depend dep,
+ pg_namespace name,
+ pg_constraint cons
+ WHERE seq.oid = dep.objid
+ AND seq.relkind = 'S'
+ AND attr.attrelid = dep.refobjid
+ AND attr.attnum = dep.refobjsubid
+ AND attr.attrelid = cons.conrelid
+ AND attr.attnum = cons.conkey[1]
+ AND cons.contype = 'p'
+ AND dep.refobjid = '"domestics"'::regclass
+[0m
+  [1m[35mSQL (1.4ms)[0m   SELECT distinct i.relname, d.indisunique, d.indkey, t.oid
+ FROM pg_class t, pg_class i, pg_index d
+ WHERE i.relkind = 'i'
+ AND d.indexrelid = i.oid
+ AND d.indisprimary = 'f'
+ AND t.oid = d.indrelid
+ AND t.relname = 'domestics'
+ AND i.relnamespace IN (SELECT oid FROM pg_namespace WHERE nspname IN ('"$user"','public') )
+ ORDER BY i.relname
+  [1m[36mSQL (0.9ms)[0m  [1m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"freights"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [1m[35mPK and serial sequence (3.8ms)[0m   SELECT attr.attname, seq.relname
+ FROM pg_class seq,
+ pg_attribute attr,
+ pg_depend dep,
+ pg_namespace name,
+ pg_constraint cons
+ WHERE seq.oid = dep.objid
+ AND seq.relkind = 'S'
+ AND attr.attrelid = dep.refobjid
+ AND attr.attnum = dep.refobjsubid
+ AND attr.attrelid = cons.conrelid
+ AND attr.attnum = cons.conkey[1]
+ AND cons.contype = 'p'
+ AND dep.refobjid = '"freights"'::regclass
+  [1m[36mSQL (1.3ms)[0m  [1m SELECT distinct i.relname, d.indisunique, d.indkey, t.oid
+ FROM pg_class t, pg_class i, pg_index d
+ WHERE i.relkind = 'i'
+ AND d.indexrelid = i.oid
+ AND d.indisprimary = 'f'
+ AND t.oid = d.indrelid
+ AND t.relname = 'freights'
+ AND i.relnamespace IN (SELECT oid FROM pg_namespace WHERE nspname IN ('"$user"','public') )
+ ORDER BY i.relname
+[0m
+  [1m[35mSQL (0.9ms)[0m   SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"internationals"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+  [1m[36mPK and serial sequence (3.3ms)[0m  [1m SELECT attr.attname, seq.relname
+ FROM pg_class seq,
+ pg_attribute attr,
+ pg_depend dep,
+ pg_namespace name,
+ pg_constraint cons
+ WHERE seq.oid = dep.objid
+ AND seq.relkind = 'S'
+ AND attr.attrelid = dep.refobjid
+ AND attr.attnum = dep.refobjsubid
+ AND attr.attrelid = cons.conrelid
+ AND attr.attnum = cons.conkey[1]
+ AND cons.contype = 'p'
+ AND dep.refobjid = '"internationals"'::regclass
+[0m
+  [1m[35mSQL (1.3ms)[0m   SELECT distinct i.relname, d.indisunique, d.indkey, t.oid
+ FROM pg_class t, pg_class i, pg_index d
+ WHERE i.relkind = 'i'
+ AND d.indexrelid = i.oid
+ AND d.indisprimary = 'f'
+ AND t.oid = d.indrelid
+ AND t.relname = 'internationals'
+ AND i.relnamespace IN (SELECT oid FROM pg_namespace WHERE nspname IN ('"$user"','public') )
+ ORDER BY i.relname
+  [1m[36mSQL (0.9ms)[0m  [1m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"invoices"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [1m[35mPK and serial sequence (3.3ms)[0m   SELECT attr.attname, seq.relname
+ FROM pg_class seq,
+ pg_attribute attr,
+ pg_depend dep,
+ pg_namespace name,
+ pg_constraint cons
+ WHERE seq.oid = dep.objid
+ AND seq.relkind = 'S'
+ AND attr.attrelid = dep.refobjid
+ AND attr.attnum = dep.refobjsubid
+ AND attr.attrelid = cons.conrelid
+ AND attr.attnum = cons.conkey[1]
+ AND cons.contype = 'p'
+ AND dep.refobjid = '"invoices"'::regclass
+  [1m[36mSQL (1.6ms)[0m  [1m SELECT distinct i.relname, d.indisunique, d.indkey, t.oid
+ FROM pg_class t, pg_class i, pg_index d
+ WHERE i.relkind = 'i'
+ AND d.indexrelid = i.oid
+ AND d.indisprimary = 'f'
+ AND t.oid = d.indrelid
+ AND t.relname = 'invoices'
+ AND i.relnamespace IN (SELECT oid FROM pg_namespace WHERE nspname IN ('"$user"','public') )
+ ORDER BY i.relname
+[0m
+  [1m[35mSQL (0.9ms)[0m   SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"items"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+  [1m[36mPK and serial sequence (3.2ms)[0m  [1m SELECT attr.attname, seq.relname
+ FROM pg_class seq,
+ pg_attribute attr,
+ pg_depend dep,
+ pg_namespace name,
+ pg_constraint cons
+ WHERE seq.oid = dep.objid
+ AND seq.relkind = 'S'
+ AND attr.attrelid = dep.refobjid
+ AND attr.attnum = dep.refobjsubid
+ AND attr.attrelid = cons.conrelid
+ AND attr.attnum = cons.conkey[1]
+ AND cons.contype = 'p'
+ AND dep.refobjid = '"items"'::regclass
+[0m
+  [1m[35mSQL (1.6ms)[0m   SELECT distinct i.relname, d.indisunique, d.indkey, t.oid
+ FROM pg_class t, pg_class i, pg_index d
+ WHERE i.relkind = 'i'
+ AND d.indexrelid = i.oid
+ AND d.indisprimary = 'f'
+ AND t.oid = d.indrelid
+ AND t.relname = 'items'
+ AND i.relnamespace IN (SELECT oid FROM pg_namespace WHERE nspname IN ('"$user"','public') )
+ ORDER BY i.relname
+  [1m[36mSQL (1.3ms)[0m  [1m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"shipments"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [1m[35mPK and serial sequence (3.7ms)[0m   SELECT attr.attname, seq.relname
+ FROM pg_class seq,
+ pg_attribute attr,
+ pg_depend dep,
+ pg_namespace name,
+ pg_constraint cons
+ WHERE seq.oid = dep.objid
+ AND seq.relkind = 'S'
+ AND attr.attrelid = dep.refobjid
+ AND attr.attnum = dep.refobjsubid
+ AND attr.attrelid = cons.conrelid
+ AND attr.attnum = cons.conkey[1]
+ AND cons.contype = 'p'
+ AND dep.refobjid = '"shipments"'::regclass
+  [1m[36mSQL (1.3ms)[0m  [1m SELECT distinct i.relname, d.indisunique, d.indkey, t.oid
+ FROM pg_class t, pg_class i, pg_index d
+ WHERE i.relkind = 'i'
+ AND d.indexrelid = i.oid
+ AND d.indisprimary = 'f'
+ AND t.oid = d.indrelid
+ AND t.relname = 'shipments'
+ AND i.relnamespace IN (SELECT oid FROM pg_namespace WHERE nspname IN ('"$user"','public') )
+ ORDER BY i.relname
+[0m
+DEPRECATION WARNING: config.action_view.debug_rjs will be removed in 3.1, from 3.1 onwards you will need to install prototype-rails to continue to use RJS templates . (called from <top (required)> at /Users/Elliott/github/pj/config/environment.rb:5)
+[nil, ["/Users/Elliott/github/pj/app/admin", "/Users/Elliott/github/pj/app/admin/admin_users.rb", "/Users/Elliott/github/pj/app/admin/clients.rb", "/Users/Elliott/github/pj/app/admin/dashboards.rb", "/Users/Elliott/github/pj/app/admin/domestics.rb", "/Users/Elliott/github/pj/app/admin/freights.rb", "/Users/Elliott/github/pj/app/admin/internationals.rb", "/Users/Elliott/github/pj/app/admin/invoices.rb", "/Users/Elliott/github/pj/app/admin/items.rb", "/Users/Elliott/github/pj/app/admin/shipments.rb"]]
+[nil, ["/Users/Elliott/github/pj/app/admin", "/Users/Elliott/github/pj/app/admin/admin_users.rb", "/Users/Elliott/github/pj/app/admin/clients.rb", "/Users/Elliott/github/pj/app/admin/dashboards.rb", "/Users/Elliott/github/pj/app/admin/domestics.rb", "/Users/Elliott/github/pj/app/admin/freights.rb", "/Users/Elliott/github/pj/app/admin/internationals.rb", "/Users/Elliott/github/pj/app/admin/invoices.rb", "/Users/Elliott/github/pj/app/admin/items.rb", "/Users/Elliott/github/pj/app/admin/shipments.rb"]]
+[nil, []]
+[nil, ["/Users/Elliott/github/pj/app/admin"]]
+[nil, ["/Users/Elliott/github/pj/app/admin", "/Users/Elliott/github/pj/app/admin/admin_users.rb"]]
+[nil, ["/Users/Elliott/github/pj/app/admin", "/Users/Elliott/github/pj/app/admin/admin_users.rb", "/Users/Elliott/github/pj/app/admin/clients.rb"]]
+[nil, ["/Users/Elliott/github/pj/app/admin", "/Users/Elliott/github/pj/app/admin/admin_users.rb", "/Users/Elliott/github/pj/app/admin/clients.rb", "/Users/Elliott/github/pj/app/admin/dashboards.rb"]]
+[nil, ["/Users/Elliott/github/pj/app/admin", "/Users/Elliott/github/pj/app/admin/admin_users.rb", "/Users/Elliott/github/pj/app/admin/clients.rb", "/Users/Elliott/github/pj/app/admin/dashboards.rb", "/Users/Elliott/github/pj/app/admin/domestics.rb"]]
+[nil, ["/Users/Elliott/github/pj/app/admin", "/Users/Elliott/github/pj/app/admin/admin_users.rb", "/Users/Elliott/github/pj/app/admin/clients.rb", "/Users/Elliott/github/pj/app/admin/dashboards.rb", "/Users/Elliott/github/pj/app/admin/domestics.rb", "/Users/Elliott/github/pj/app/admin/freights.rb"]]
+[nil, ["/Users/Elliott/github/pj/app/admin", "/Users/Elliott/github/pj/app/admin/admin_users.rb", "/Users/Elliott/github/pj/app/admin/clients.rb", "/Users/Elliott/github/pj/app/admin/dashboards.rb", "/Users/Elliott/github/pj/app/admin/domestics.rb", "/Users/Elliott/github/pj/app/admin/freights.rb", "/Users/Elliott/github/pj/app/admin/internationals.rb"]]
+[nil, ["/Users/Elliott/github/pj/app/admin", "/Users/Elliott/github/pj/app/admin/admin_users.rb", "/Users/Elliott/github/pj/app/admin/clients.rb", "/Users/Elliott/github/pj/app/admin/dashboards.rb", "/Users/Elliott/github/pj/app/admin/domestics.rb", "/Users/Elliott/github/pj/app/admin/freights.rb", "/Users/Elliott/github/pj/app/admin/internationals.rb", "/Users/Elliott/github/pj/app/admin/invoices.rb"]]
+[nil, ["/Users/Elliott/github/pj/app/admin", "/Users/Elliott/github/pj/app/admin/admin_users.rb", "/Users/Elliott/github/pj/app/admin/clients.rb", "/Users/Elliott/github/pj/app/admin/dashboards.rb", "/Users/Elliott/github/pj/app/admin/domestics.rb", "/Users/Elliott/github/pj/app/admin/freights.rb", "/Users/Elliott/github/pj/app/admin/internationals.rb", "/Users/Elliott/github/pj/app/admin/invoices.rb", "/Users/Elliott/github/pj/app/admin/items.rb"]]
+
+
+Started GET "/" for 127.0.0.1 at 2012-03-27 22:38:46 -1000
+[nil, ["/Users/Elliott/github/pj/app/admin", "/Users/Elliott/github/pj/app/admin/admin_users.rb", "/Users/Elliott/github/pj/app/admin/clients.rb", "/Users/Elliott/github/pj/app/admin/dashboards.rb", "/Users/Elliott/github/pj/app/admin/domestics.rb", "/Users/Elliott/github/pj/app/admin/freights.rb", "/Users/Elliott/github/pj/app/admin/internationals.rb", "/Users/Elliott/github/pj/app/admin/invoices.rb", "/Users/Elliott/github/pj/app/admin/items.rb", "/Users/Elliott/github/pj/app/admin/shipments.rb"]]
+  [1m[36mSQL (0.4ms)[0m  [1mSHOW client_min_messages[0m
+  [1m[35mSQL (0.2ms)[0m  SET client_min_messages TO 'panic'
+  [1m[36mSQL (0.1ms)[0m  [1mSET standard_conforming_strings = on[0m
+  [1m[35mSQL (0.1ms)[0m  SET client_min_messages TO 'notice'
+  [1m[36mSQL (0.5ms)[0m  [1mSET time zone 'UTC'[0m
+  [1m[35mSQL (0.1ms)[0m  SHOW TIME ZONE
+  Processing by WelcomeController#index as HTML
+Redirected to http://localhost:3000/admin/login
+Completed 302 Found in 1ms
+
+
+Started GET "/admin/login" for 127.0.0.1 at 2012-03-27 22:38:47 -1000
+[nil, ["/Users/Elliott/github/pj/app/admin", "/Users/Elliott/github/pj/app/admin/admin_users.rb", "/Users/Elliott/github/pj/app/admin/clients.rb", "/Users/Elliott/github/pj/app/admin/dashboards.rb", "/Users/Elliott/github/pj/app/admin/domestics.rb", "/Users/Elliott/github/pj/app/admin/freights.rb", "/Users/Elliott/github/pj/app/admin/internationals.rb", "/Users/Elliott/github/pj/app/admin/invoices.rb", "/Users/Elliott/github/pj/app/admin/items.rb", "/Users/Elliott/github/pj/app/admin/shipments.rb"]]
+  Processing by ActiveAdmin::Devise::SessionsController#new as HTML
+  [1m[36mSQL (4.8ms)[0m  [1m SELECT tablename
+ FROM pg_tables
+ WHERE schemaname = ANY (current_schemas(false))
+[0m
+  [1m[35mSQL (3.8ms)[0m   SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"admin_users"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+  [1m[36mAdminUser Load (49.3ms)[0m  [1mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = 1 LIMIT 1[0m
+  [1m[35mSQL (1.1ms)[0m   SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"admin_users"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+Rendered /Users/Elliott/.rvm/gems/ruby-1.9.2-p290/gems/activeadmin-0.4.0/app/views/active_admin/devise/shared/_links.erb (1.7ms)
+Rendered /Users/Elliott/.rvm/gems/ruby-1.9.2-p290/gems/activeadmin-0.4.0/app/views/active_admin/devise/sessions/new.html.erb within layouts/active_admin_logged_out (1177.1ms)
+Completed 200 OK in 1500ms (Views: 1209.9ms | ActiveRecord: 60.5ms)
+
+
+Started POST "/admin/login" for 127.0.0.1 at 2012-03-27 22:39:05 -1000
+[nil, ["/Users/Elliott/github/pj/app/admin", "/Users/Elliott/github/pj/app/admin/admin_users.rb", "/Users/Elliott/github/pj/app/admin/clients.rb", "/Users/Elliott/github/pj/app/admin/dashboards.rb", "/Users/Elliott/github/pj/app/admin/domestics.rb", "/Users/Elliott/github/pj/app/admin/freights.rb", "/Users/Elliott/github/pj/app/admin/internationals.rb", "/Users/Elliott/github/pj/app/admin/invoices.rb", "/Users/Elliott/github/pj/app/admin/items.rb", "/Users/Elliott/github/pj/app/admin/shipments.rb"]]
+  Processing by ActiveAdmin::Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0BrMmViS0rv2CfyfpZBpjcwSr7EXBq6TkgJWYgw8BcU=", "admin_user"=>{"email"=>"admin@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Login"}
+  [1m[36mSQL (1.8ms)[0m  [1m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"admin_users"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [1m[35mAdminUser Load (1.2ms)[0m  SELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."email" = 'admin@example.com' LIMIT 1
+  [1m[36mSQL (1.1ms)[0m  [1m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"admin_users"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [1m[35mSQL (0.3ms)[0m  BEGIN
+  [1m[36mAREL (0.8ms)[0m  [1mUPDATE "admin_users" SET "current_sign_in_at" = '2012-03-28 08:39:05.903651', "sign_in_count" = 2, "updated_at" = '2012-03-28 08:39:05.904570' WHERE "admin_users"."id" = 1[0m
+  [1m[35mSQL (41.9ms)[0m  COMMIT
+Redirected to http://localhost:3000/admin
+Completed 302 Found in 422ms
+
+
+Started GET "/admin" for 127.0.0.1 at 2012-03-27 22:39:06 -1000
+[nil, ["/Users/Elliott/github/pj/app/admin", "/Users/Elliott/github/pj/app/admin/admin_users.rb", "/Users/Elliott/github/pj/app/admin/clients.rb", "/Users/Elliott/github/pj/app/admin/dashboards.rb", "/Users/Elliott/github/pj/app/admin/domestics.rb", "/Users/Elliott/github/pj/app/admin/freights.rb", "/Users/Elliott/github/pj/app/admin/internationals.rb", "/Users/Elliott/github/pj/app/admin/invoices.rb", "/Users/Elliott/github/pj/app/admin/items.rb", "/Users/Elliott/github/pj/app/admin/shipments.rb"]]
+  Processing by Admin::DashboardController#index as HTML
+  [1m[36mSQL (1.7ms)[0m  [1m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"admin_users"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [1m[35mAdminUser Load (0.7ms)[0m  SELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = 1 LIMIT 1
+  [1m[36mSQL (1.0ms)[0m  [1m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"admin_users"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [1m[35mInvoice Load (56.6ms)[0m  SELECT "invoices".* FROM "invoices" ORDER BY created_at desc LIMIT 5
+  [1m[36mSQL (1.2ms)[0m  [1m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"invoices"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [1m[35mSQL (1.5ms)[0m   SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"clients"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+  [1m[36mClient Load (16.4ms)[0m  [1mSELECT "clients".* FROM "clients" WHERE "clients"."id" = 1 LIMIT 1[0m
+  [1m[35mSQL (1.0ms)[0m   SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"clients"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+  [1m[36mItem Load (6.6ms)[0m  [1mSELECT "items".* FROM "items" WHERE ("items".invoice_id = 1)[0m
+  [1m[35mSQL (1.3ms)[0m   SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"items"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+  [1m[36mSQL (0.9ms)[0m  [1mSELECT COUNT(*) FROM "invoices" WHERE (created_at >= '2012-03-01 00:00:00')[0m
+  [1m[35mSQL (1.1ms)[0m   SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"invoices"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+  [1m[36mSQL (0.6ms)[0m  [1mSELECT COUNT(*) FROM "invoices" WHERE "invoices"."status" = 'paid' AND (created_at >= '2012-03-01 00:00:00')[0m
+  [1m[35mInvoice Load (0.6ms)[0m  SELECT "invoices".* FROM "invoices" WHERE "invoices"."status" = 'paid' AND (created_at >= '2012-03-01 00:00:00')
+Rendered /Users/Elliott/.rvm/gems/ruby-1.9.2-p290/gems/activeadmin-0.4.0/app/views/active_admin/dashboard/index.html.arb (271.6ms)
+Completed 200 OK in 336ms (Views: 216.9ms | ActiveRecord: 91.1ms)
+
+
+Started GET "/admin/invoices" for 127.0.0.1 at 2012-03-27 22:39:10 -1000
+[nil, ["/Users/Elliott/github/pj/app/admin", "/Users/Elliott/github/pj/app/admin/admin_users.rb", "/Users/Elliott/github/pj/app/admin/clients.rb", "/Users/Elliott/github/pj/app/admin/dashboards.rb", "/Users/Elliott/github/pj/app/admin/domestics.rb", "/Users/Elliott/github/pj/app/admin/freights.rb", "/Users/Elliott/github/pj/app/admin/internationals.rb", "/Users/Elliott/github/pj/app/admin/invoices.rb", "/Users/Elliott/github/pj/app/admin/items.rb", "/Users/Elliott/github/pj/app/admin/shipments.rb"]]
+  Processing by Admin::InvoicesController#index as HTML
+  [1m[36mSQL (1.7ms)[0m  [1m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"admin_users"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [1m[35mAdminUser Load (0.8ms)[0m  SELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = 1 LIMIT 1
+  [1m[36mSQL (1.5ms)[0m  [1m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"admin_users"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [1m[35mInvoice Load (1.4ms)[0m  SELECT "invoices".* FROM "invoices" ORDER BY "invoices".id desc LIMIT 30 OFFSET 0
+  [1m[36mSQL (1.5ms)[0m  [1m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"invoices"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [1m[35mSQL (0.6ms)[0m  SELECT COUNT(*) FROM "invoices"
+  [1m[36mSQL (1.5ms)[0m  [1m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"invoices"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [1m[35mSQL (0.7ms)[0m  SELECT COUNT(*) FROM "invoices" WHERE "invoices"."status" = 'draft'
+  [1m[36mSQL (0.6ms)[0m  [1mSELECT COUNT(*) FROM "invoices" WHERE "invoices"."status" = 'sent'[0m
+  [1m[35mSQL (0.6ms)[0m  SELECT COUNT(*) FROM "invoices" WHERE "invoices"."status" = 'paid'
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "invoices"[0m
+  [1m[35mSQL (1.2ms)[0m   SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"clients"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+  [1m[36mClient Load (0.4ms)[0m  [1mSELECT "clients".* FROM "clients" WHERE "clients"."id" = 1 LIMIT 1[0m
+  [1m[35mSQL (0.8ms)[0m   SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"clients"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+  [1m[36mItem Load (0.6ms)[0m  [1mSELECT "items".* FROM "items" WHERE ("items".invoice_id = 1)[0m
+  [1m[35mSQL (1.3ms)[0m   SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"items"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+  [1m[36mClient Load (0.6ms)[0m  [1mSELECT "clients".* FROM "clients"[0m
+Rendered /Users/Elliott/.rvm/gems/ruby-1.9.2-p290/gems/activeadmin-0.4.0/app/views/active_admin/resource/index.html.arb (868.9ms)
+Completed 200 OK in 956ms (Views: 892.2ms | ActiveRecord: 15.7ms)
+
+
+Started GET "/admin/shipments" for 127.0.0.1 at 2012-03-27 22:39:15 -1000
+[nil, ["/Users/Elliott/github/pj/app/admin", "/Users/Elliott/github/pj/app/admin/admin_users.rb", "/Users/Elliott/github/pj/app/admin/clients.rb", "/Users/Elliott/github/pj/app/admin/dashboards.rb", "/Users/Elliott/github/pj/app/admin/domestics.rb", "/Users/Elliott/github/pj/app/admin/freights.rb", "/Users/Elliott/github/pj/app/admin/internationals.rb", "/Users/Elliott/github/pj/app/admin/invoices.rb", "/Users/Elliott/github/pj/app/admin/items.rb", "/Users/Elliott/github/pj/app/admin/shipments.rb"]]
+  Processing by Admin::ShipmentsController#index as HTML
+  [1m[35mSQL (1.3ms)[0m   SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"admin_users"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+  [1m[36mAdminUser Load (0.5ms)[0m  [1mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = 1 LIMIT 1[0m
+  [1m[35mSQL (1.0ms)[0m   SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"admin_users"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+  [1m[36mShipment Load (1.7ms)[0m  [1mSELECT "shipments".* FROM "shipments" ORDER BY "shipments".id desc LIMIT 30 OFFSET 0[0m
+  [1m[35mSQL (1.5ms)[0m   SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"shipments"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+Rendered /Users/Elliott/.rvm/gems/ruby-1.9.2-p290/gems/activeadmin-0.4.0/app/views/active_admin/resource/index.html.arb (234.3ms)
+Completed 200 OK in 282ms (Views: 238.2ms | ActiveRecord: 6.1ms)
+
+
+Started GET "/admin/shipments/new" for 127.0.0.1 at 2012-03-27 22:39:23 -1000
+[nil, ["/Users/Elliott/github/pj/app/admin", "/Users/Elliott/github/pj/app/admin/admin_users.rb", "/Users/Elliott/github/pj/app/admin/clients.rb", "/Users/Elliott/github/pj/app/admin/dashboards.rb", "/Users/Elliott/github/pj/app/admin/domestics.rb", "/Users/Elliott/github/pj/app/admin/freights.rb", "/Users/Elliott/github/pj/app/admin/internationals.rb", "/Users/Elliott/github/pj/app/admin/invoices.rb", "/Users/Elliott/github/pj/app/admin/items.rb", "/Users/Elliott/github/pj/app/admin/shipments.rb"]]
+  Processing by Admin::ShipmentsController#new as HTML
+  [1m[36mSQL (1.2ms)[0m  [1m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"admin_users"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [1m[35mAdminUser Load (0.4ms)[0m  SELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = 1 LIMIT 1
+  [1m[36mSQL (0.8ms)[0m  [1m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"admin_users"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [1m[35mSQL (1.4ms)[0m   SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"shipments"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+  [1m[36mClient Load (0.6ms)[0m  [1mSELECT "clients".* FROM "clients"[0m
+  [1m[35mSQL (1.0ms)[0m   SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"clients"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+  [1m[36mSQL (1.4ms)[0m  [1m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"items"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+Rendered /Users/Elliott/.rvm/gems/ruby-1.9.2-p290/gems/activeadmin-0.4.0/app/views/active_admin/resource/new.html.arb (641.7ms)
+Completed 500 Internal Server Error in 781ms
+
+ActionView::Template::Error (undefined method `weight_value' for #<Item:0x007f9b82fda0a0>):
+    1: render renderer_for(:new)
+  app/admin/shipments.rb:296:in `block (4 levels) in <top (required)>'
+  app/admin/shipments.rb:294:in `block (3 levels) in <top (required)>'
+  app/admin/shipments.rb:293:in `block (2 levels) in <top (required)>'
+
+Rendered /Users/Elliott/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.0.10/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.6ms)
+Rendered /Users/Elliott/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.0.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.1ms)
+Rendered /Users/Elliott/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.0.10/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (10.5ms)
